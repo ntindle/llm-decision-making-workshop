@@ -210,11 +210,12 @@ def main(goal):
                 )
                 sender.send_command(f"{tool_blocks[0].input['direction']}-{tool_blocks[0].input['distance']}")
             if tool_blocks[0].name == "turn_robot":
+                degrees_ = tool_blocks[0].input['degrees']
                 print(
-                    f"-----Turning robot {tool_blocks[0].input['degrees']} degrees-----"  # type: ignore
+                    f"-----Turning robot {degrees_} degrees-----"  # type: ignore
                 )
-                sender.send_command(f"{'left' if tool_blocks[0].input['degrees'] else 'right'}"
-                                    f"-{tool_blocks[0].input['degrees']}")
+                sender.send_command(f"{'left' if degrees_ else 'right'}"
+                                    f"-{'short' if abs(degrees_) < 120 else 'medium' if abs(degrees_) < 240 else 'long'}")
 
         # Wait for 10 seconds before next iteration
         time.sleep(10)
