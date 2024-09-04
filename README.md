@@ -83,3 +83,65 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+## How the Agent System Works
+
+This workshop demonstrates a simple yet powerful AI-driven agent system. Here's an overview of how it functions:
+
+1. **Image Capture**: The system continuously captures images from the camera using OpenCV (`cv2`).
+
+2. **Image Analysis**: Each captured image is sent to the Claude AI model along with the current goal and history.
+
+3. **Decision Making**: Claude analyzes the image and makes decisions based on:
+   - The current visual input (image)
+   - The given goal
+   - The history of previous actions and observations
+
+4. **Action Execution**: The AI chooses an action using predefined tools:
+   - `move_robot`: Move forward or backward
+   - `turn_robot`: Rotate the robot
+   - `finish_task`: Complete the current goal
+
+5. **Feedback Loop**: The system updates its history with the AI's analysis and chosen action, then captures a new image to start the cycle again.
+
+6. **History Management**: The system maintains a history of interactions and decisions:
+   - After each analysis, the AI's response (including text output and tool use) is added to the history.
+   - This history is passed to the AI in subsequent iterations, allowing it to consider past actions and observations.
+   - The `history` variable grows with each iteration, providing context for future decisions.
+
+Key Components:
+
+- `capture_image_from_camera()`: Captures and processes images from the webcam.
+- `analyze_image()`: Sends the image to Claude AI and interprets the response.
+- `main()`: Orchestrates the entire process in a continuous loop.
+- `history`: A list that accumulates the AI's responses and actions over time, providing context for decision-making.
+
+The history plays a crucial role in the agent's decision-making process:
+- It allows the AI to remember and learn from past actions and observations.
+- The AI can use this information to make more informed decisions, avoiding repetition and building on previous knowledge.
+- As the history grows, the AI's understanding of the environment and its progress towards the goal becomes more comprehensive.
+
+By examining the history, you can trace the AI's decision-making process and see how it adapts its strategy based on accumulated information.
+
+The AI agent uses a combination of computer vision (via the camera input) and natural language processing (for understanding the goal and making decisions) to navigate and interact with its environment. This simulates how a real robot might perceive and make decisions in a physical space.
+
+By modifying the available tools, adjusting the goal, or changing the environment, you can explore how the AI adapts its decision-making process to different scenarios.
+
+To better visualize the agent's decision-making process, here's a flowchart of the system:
+
+```mermaid
+graph TD
+    A[Start] --> B[Ask for goal]
+    B--> C[Capture Image]
+    C --> D[Save Debug Image]
+    D --> E[Analyze Image with Claude AI]
+    E --> F[Update History]
+    F --> G{AI Decision}
+    G -->|Move| H[Move Robot]
+    G -->|Turn| I[Turn Robot]
+    G -->|Finish| J[Finish Task]
+    H --> K[Wait]
+    I --> K
+    K --> C
+    J --> L[End]
+```
