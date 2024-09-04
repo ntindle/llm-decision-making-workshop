@@ -132,16 +132,17 @@ To better visualize the agent's decision-making process, here's a flowchart of t
 ```mermaid
 graph TD
     A[Start] --> B[Ask for goal]
-    B--> C[Capture Image]
+    B --> C[Capture Image]
     C --> D[Save Debug Image]
     D --> E[Analyze Image with Claude AI]
-    E --> F[Update History]
-    F --> G{AI Decision}
-    G -->|Move| H[Move Robot]
-    G -->|Turn| I[Turn Robot]
-    G -->|Finish| J[Finish Task]
-    H --> K[Wait]
-    I --> K
-    K --> C
-    J --> L[End]
+    E --> G{AI Decision}
+    G --> F[Update History]
+    F --> H{Tool Use}
+    H -->|Move| I[Move Robot]
+    H -->|Turn| J[Turn Robot]
+    H -->|Finish| K[Finish Task]
+    I --> L[Wait]
+    J --> L
+    L --> C
+    K --> M[End]
 ```
