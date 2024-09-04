@@ -929,6 +929,62 @@ dev = ["pre-commit (==3.5.0)", "pre-commit (==3.7.0)", "pytest (==8.2.0)", "pyte
 docs = ["furo (==2024.4.27)", "pyenchant (==3.2.2)", "sphinx (==7.1.2)", "sphinx (==7.3.7)", "sphinx-autobuild (==2021.3.14)", "sphinx-autobuild (==2024.4.16)", "sphinx-copybutton (==0.5.2)", "sphinx-tabs (==3.4.5)", "sphinxcontrib-spelling (==8.0.0)"]
 
 [[package]]
+name = "simplepyble"
+version = "0.7.3"
+description = "The ultimate fully-fledged cross-platform BLE library, designed for simplicity and ease of use."
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "simplepyble-0.7.3-cp310-cp310-macosx_10_15_universal2.whl", hash = "sha256:737d6d9145af42207c3db5375186752e4857aec1166a71b46faacef648e30370"},
+    {file = "simplepyble-0.7.3-cp310-cp310-macosx_10_15_x86_64.whl", hash = "sha256:4c838b3057b8191640ced9fde3a8338fea4f43b1cf8839869ce8c6a8f723f5cc"},
+    {file = "simplepyble-0.7.3-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:1a2a429e87afd385b6412f76b425f8bab14cb0b5b189217f31d3a6e5b67baba9"},
+    {file = "simplepyble-0.7.3-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:260034672f468050bc3b5248ed2372c0242fba2295e31b800cbb850b8ede0d57"},
+    {file = "simplepyble-0.7.3-cp310-cp310-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:e758dfc51546bdb26f8339e05ad28877213ea2b67840db62c872ec8db41049ac"},
+    {file = "simplepyble-0.7.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:dbae8753c1ea31a1ee8a8da47f50b22005524a372012c0cf244b58683797bda0"},
+    {file = "simplepyble-0.7.3-cp310-cp310-win32.whl", hash = "sha256:262e71a5f237f3af28f8718dd1588893402cd6db4d1a511312bce834ed372508"},
+    {file = "simplepyble-0.7.3-cp310-cp310-win_amd64.whl", hash = "sha256:e89a5bb9df092206e46bc73a44b42b697ba1b7db86bca5c8e97414f3489c3a6b"},
+    {file = "simplepyble-0.7.3-cp311-cp311-macosx_10_15_universal2.whl", hash = "sha256:b675fb5d6ac1986815e9ccff6594078406618b591a0a6285b27078d493c1185a"},
+    {file = "simplepyble-0.7.3-cp311-cp311-macosx_10_15_x86_64.whl", hash = "sha256:712062390a90494eb717c39afeae7145998669aeeb27e144f97be835c664710a"},
+    {file = "simplepyble-0.7.3-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:c9ae2089ec0448984c68a36419a07c5efb977e0e2ad634e887e5a585589630cd"},
+    {file = "simplepyble-0.7.3-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:46e29f7ca6ec7cfa86fadc15cf45c4b181126a652997f6827a8381f892dc6c9d"},
+    {file = "simplepyble-0.7.3-cp311-cp311-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:b18bd21350d2a9231816d33c15e184da5bb8eb302df94d9e134e11dc131a4e8e"},
+    {file = "simplepyble-0.7.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:2a81d34e369c8304083357265317247e0867cf3919b5f1b78ad25fc6347f194c"},
+    {file = "simplepyble-0.7.3-cp311-cp311-win32.whl", hash = "sha256:514e42c91ed19bab4ab5fbfe9a493006030dc5f166e55b0af45fec502b16adf0"},
+    {file = "simplepyble-0.7.3-cp311-cp311-win_amd64.whl", hash = "sha256:520e3069f87e514ed2787f62e6f140a6edd2c8900f90dc8d9d80a90fcf800a05"},
+    {file = "simplepyble-0.7.3-cp312-cp312-macosx_10_15_universal2.whl", hash = "sha256:a7a38e5dd545a23dd302b41a77f7de06a4a6ea9765283d5c4b5af4190ec1a6e9"},
+    {file = "simplepyble-0.7.3-cp312-cp312-macosx_10_15_x86_64.whl", hash = "sha256:e9a61f87998857f05ea057bf90657b2e425099151b1648761adc86f619cc88f5"},
+    {file = "simplepyble-0.7.3-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:9f4a56a25b8873505c5430cdce74ca55a8db19c0ee3398743c4599228a295692"},
+    {file = "simplepyble-0.7.3-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:6e954e598860f84955f8d4587abe8a3b4370402598fea8fa67298ea70e4ddb73"},
+    {file = "simplepyble-0.7.3-cp312-cp312-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:2334e93551b25e82b62083f68b5299effda806b77ae1fe33f042250dfa9f751d"},
+    {file = "simplepyble-0.7.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:09abdb1a826dbbdcf370fc227d576899bbf8770f6d4c4bda60402baf538d1ab1"},
+    {file = "simplepyble-0.7.3-cp312-cp312-win32.whl", hash = "sha256:936b5b968d845dfbedc9931a41fdc67f5086daf94e2b555b6be3b8788c4770e2"},
+    {file = "simplepyble-0.7.3-cp312-cp312-win_amd64.whl", hash = "sha256:0e5b0372ba15fdae687d6380d5e27d80572efbb4beb6d74fa1aeb5fee20ec34c"},
+    {file = "simplepyble-0.7.3-cp37-cp37m-macosx_10_15_x86_64.whl", hash = "sha256:887235ed9b8915e10001069f20a32ed9c5aa84bd1d166f6119b3934643895d67"},
+    {file = "simplepyble-0.7.3-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:4b5b0c969be6b742e09c14c0eb9e6af5ff9cbba0cbe44eb16a4667d6e74b7c17"},
+    {file = "simplepyble-0.7.3-cp37-cp37m-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:2c75e1be1ffa519e8c5886d5f011cd1f846ebc8f2d6b029072572c2936174bfd"},
+    {file = "simplepyble-0.7.3-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:4e90be303353a5f20a7c25132022fcc86c7034797bca88f6a9f967a5664588ca"},
+    {file = "simplepyble-0.7.3-cp37-cp37m-win32.whl", hash = "sha256:b615901dd6082b4a56890f5a2d06b651b32f67bcd61e0cc4adc2a027e9c66f55"},
+    {file = "simplepyble-0.7.3-cp37-cp37m-win_amd64.whl", hash = "sha256:29d98dbde48d8999d5a733261eafa0d0429f4f8ab789f6a6ae033be8731da3e1"},
+    {file = "simplepyble-0.7.3-cp38-cp38-macosx_10_15_universal2.whl", hash = "sha256:39479cbfc9618817ef34f6a6e39a49d41d18b1d02cdfa96a6163dd4e5375d21b"},
+    {file = "simplepyble-0.7.3-cp38-cp38-macosx_10_15_x86_64.whl", hash = "sha256:ecd61426ba6fda2b7ed33c0d9bf3d3340c38d642a4f60cc4a54b3b57f777e641"},
+    {file = "simplepyble-0.7.3-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:bdf1424a99dbf966897355678539d287a8d21efe3f09b9e369514ec9e9c8cf29"},
+    {file = "simplepyble-0.7.3-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:2347ea82fac75191ed9297651ac0a12fe96f5c44b8394b46d4d1dc466000d74e"},
+    {file = "simplepyble-0.7.3-cp38-cp38-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:3fae3c4fe7052854fce9f69b775ea3137dccb26eb91af186b59e1ebd373c8ec0"},
+    {file = "simplepyble-0.7.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:f294f233c56cd4521391f8e19c9cda42e2696d068dc240420b38c5a362926eec"},
+    {file = "simplepyble-0.7.3-cp38-cp38-win32.whl", hash = "sha256:e04cc37640e19c1e8a61461fe28da35d22dbc6f4d8586bf8d7ca019401c5d0bf"},
+    {file = "simplepyble-0.7.3-cp38-cp38-win_amd64.whl", hash = "sha256:b0963bad02a6261e71292665487a20ee663dc470bcdcb3ec6d1210e506255360"},
+    {file = "simplepyble-0.7.3-cp39-cp39-macosx_10_15_universal2.whl", hash = "sha256:e00c6d18df70dab35b8f84e21e627c7b9a3853f2f8deec0c5c7ce190211e570c"},
+    {file = "simplepyble-0.7.3-cp39-cp39-macosx_10_15_x86_64.whl", hash = "sha256:bd82156acd1faf1a84f1a1c2f9317841f822ad5e0b9492d77fd7e62f8498ea9e"},
+    {file = "simplepyble-0.7.3-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:97d0b32fbe276d934f475d7b65960f52a96eaf16b25b9d76df380b3a9890b8da"},
+    {file = "simplepyble-0.7.3-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:95438dffea86e872db0d97627513b1d5312b8edfb7ee6bb246a133100affe2ad"},
+    {file = "simplepyble-0.7.3-cp39-cp39-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:e532b5ee112aeb187a37cf68f7f08c4163b7b216d6b0a11df9494b71650c3570"},
+    {file = "simplepyble-0.7.3-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:58f8bd679ccbcf3b29dadc944f75d5a0a162c63ed350fabdc96c845e067c5dd1"},
+    {file = "simplepyble-0.7.3-cp39-cp39-win32.whl", hash = "sha256:6fe03d9635911898e41022bbfaac64f7bb8ac3279940ba64df291b018d840bb1"},
+    {file = "simplepyble-0.7.3-cp39-cp39-win_amd64.whl", hash = "sha256:935db54a92976be4099a0c0c7dac9c9d3b4096e771f630722f23cde810c95c74"},
+    {file = "simplepyble-0.7.3.tar.gz", hash = "sha256:c17d4063a52ea86a7eb064891a849a470ee1f8ef8e13e696d93ca224312f5039"},
+]
+
+[[package]]
 name = "sniffio"
 version = "1.3.1"
 description = "Sniff out which async library your code is running under"
@@ -1107,4 +1163,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "6571ad46adb454f1f7d31562c3af736fc7bed3075a7afd7d7656f2bad3974fc5"
+content-hash = "482c083aba89cabcd19f5e84dc6f5ab3e1db33e8821818b62f7ffe08b2b4940e"

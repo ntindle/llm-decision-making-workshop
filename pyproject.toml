@@ -3,7 +3,7 @@ name = "llm-workshop"
 version = "0.1.0"
 description = ""
 authors = ["Nicholas Tindle <nicholas.tindle@agpt.co>"]
-license = "MIT"
+license = "GPL-3.0-only"
 readme = "README.md"
 
 [tool.poetry.dependencies]
@@ -13,6 +13,7 @@ pyautogui = "^0.9.54"
 opencv-python = "^4.10.0.84"
 pydantic = "^2.8.2"
 pydantic-settings = "^2.4.0"
+simplepyble = "^0.7.3"
 
 
 [build-system]
