@@ -13,6 +13,7 @@ pyautogui = "^0.9.54"
 opencv-python = "^4.10.0.84"
 pydantic = "^2.8.2"
 pydantic-settings = "^2.4.0"
+simplepyble = "^0.7.3"
 
 
 [build-system]
