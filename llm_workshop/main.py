@@ -5,6 +5,7 @@ import anthropic  # For interacting with Anthropic API
 import cv2  # OpenCV for camera capture
 from pydantic_settings import BaseSettings  # Import Pydantic for settings management
 import base64  # Add this import at the top of the file
+from command_sender import command_sender
 
 
 # Define settings class
@@ -84,12 +85,18 @@ def analyze_image(image, goal, history):
             "input_schema": {
                 "type": "object",
                 "properties": {
-                    "degrees": {
-                        "type": "number",
-                        "description": "The degrees to turn the robot with positive being right and negative being left from the current perspective",
+                    "direction": {
+                        "type": "string",
+                        "enum": ["left", "right"],
+                        "description": "The direction to turn the robot",
                     },
+                    "duration": {
+                        "type": "string",
+                        "enum": ["short", "medium", "long"],
+                        "description": "The duration to turn the robot in the direction specified",
+                    }
                 },
-                "required": ["degrees"],
+                "required": ["direction", "duration"],
             },
         },
         {
@@ -180,6 +187,7 @@ def save_debug_image(screenshot):
 
 def main(goal):
     history = []
+    sender = command_sender()
     while True:
         # Capture image from camera
         screenshot = capture_image_from_camera()
@@ -205,12 +213,17 @@ def main(goal):
                 break
             if tool_blocks[0].name == "move_robot":
                 print(
-                    f"-----Moving robot {tool_blocks[0].input['direction']} {tool_blocks[0].input['distance']}-----"  # type: ignore
+                    f"-----Moving robot {tool_blocks[0].input['direction']} {tool_blocks[0].input['distance']}-----"
+                    # type: ignore
                 )
+                sender.send_command(f"{tool_blocks[0].input['direction']}-{tool_blocks[0].input['distance']}")
             if tool_blocks[0].name == "turn_robot":
+                direction = tool_blocks[0].input['direction']
+                duration = tool_blocks[0].input['duration']
                 print(
-                    f"-----Turning robot {tool_blocks[0].input['degrees']} degrees-----"  # type: ignore
+                    f"-----Turning robot {direction} {duration}-----"  # type: ignore
                 )
+                sender.send_command(f"{direction}-{duration}")
 
         # Wait for 10 seconds before next iteration
         time.sleep(10)
